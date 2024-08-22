@@ -58,8 +58,8 @@ function Acordion() {
                             </div>
 
                             <div className='CustomInput'>
-                            <input type="radio" className="NoButton" id="NoTxt2" name="action1" value="no" />
-                            <label for="NoTxt2">No</label>
+                                <input type="radio" className="NoButton" id="NoTxt2" name="action1" value="no" />
+                                <label for="NoTxt2">No</label>
                             </div>
                         </div>
 
