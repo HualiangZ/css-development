@@ -6,6 +6,10 @@ function Acordion() {
     const [Hidden, setHidden] = useState(false)
     return (
         <div className="FormSelect">
+            <br/>
+                <div className="border" style={{width: Hidden ? "100%": 0}} />
+            <br/>
+
             <form className="FormGroup">
                 <div className="Accordion">
                     <h2 className="form-title">Create New</h2>
@@ -33,7 +37,9 @@ function Acordion() {
                         </div>
 
                     </div>
-                    <br></br>
+                    <br/>
+                        <div className="border" style={{width: '95%', borderColor: 'grey' }}/>
+                    <br/>
                     <div className="FormQ2">
                         <div>
                             <label for="question2">Question 2?</label>
@@ -118,7 +124,12 @@ export default function Page1() {
             
             {Acordion()}
 
+
+            <br/>
+                <div className="border" />
+
             <div className="CreateForm">
+                
                 <button className='Create'> + </button>
                 <div className='CreateText'>
                     <label for="CreateNewForm">Create New</label>
