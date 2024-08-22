@@ -1,0 +1,239 @@
+.PageContainer-page1{
+    background: #00051F;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1, p, label, h2{
+    color: #fff;
+}
+
+.Banner{
+    z-index: 1;
+    width: 100%;
+    background-color: #00051F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+h1{
+    font-family: Caviar dreams;
+    font-weight:bold;
+    text-transform: capitalize;
+    font-size: 18;
+}
+
+.CreateForm{
+    display: flex;
+    padding-top: 20px;
+    flex-direction:row;
+    width: 100%;
+}
+
+.FormDone{
+    width: 100%;
+    background-color: #00051F;
+    position: sticky;
+    bottom: 0;
+    min-height :100px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+.FormSelect{
+    min-width: 90%;
+}
+
+
+
+.FormGroup{
+    background: #383A47 ;
+    border-radius: 4%;
+    
+}
+
+.form-title{
+    border: 1px solid #00ABD5;
+    border-top:none ;
+    border-left:none ;
+    border-right:none ;
+}
+
+.FormGroup{
+    padding-left: 2%;
+}
+
+.FormQ1{
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+
+
+
+.FormQ2{
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+.ToggleGroup{
+    align-items: flex-end;
+    padding-right: 5%;
+}
+
+
+.FormDate{
+    padding-top: 2%;
+    padding-bottom: 10%;
+    display: flex;
+}
+
+.Decade, .Year, .Month, .Day{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+}
+
+.YearSelect, .DecadeSelect, .MonthSelect, .DaySelect{
+    background-color: transparent;
+    border-top:none ;
+    border-left:none ;
+    border-right:none ;
+    color: #fff;
+    border-bottom-color: #00ABD5;
+    border-bottom-width: 2px;
+    
+}
+
+option{
+    background-color: #383A47;
+}
+
+.CreateForm{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.NewFormTilte{
+    background-color: transparent;
+    border: none;
+    color: #fff ;
+    
+}
+
+.Create{
+    max-width: 25px;
+    max-height: 25px;
+    background-color: #00ABD5;
+    color: #fff;
+    font-size: 20px;
+    border:none;
+    margin-left: 5%;
+}
+
+.CreateText{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+
+.DoneBtn{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+    min-width: 20%;
+    font-size: 20px;
+}
+
+.MaybeLaterBtn{
+    text-decoration: underline;
+}
+
+.ColapesBtn{
+    padding-right: 10px;
+    padding-top: 5%;
+    width: 25px;
+    min-height: 50px;
+}
+
+.AccordionBtn{
+    z-index: 0;
+    min-width: 100%;
+    min-height: 50%;
+    border-radius: 80px;
+    background-image: url("../Images/BackArrow.svg");
+    background-size: cover;
+    background-color: #00ABD5;
+    border: none;
+    
+}
+
+.Accordion{
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    min-width: 100%;
+}
+
+.CompleteButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.complete{
+    background-color: #00ABD5;
+    background-image: url("../Images/Gradient_tick.svg");
+    background-size: cover;
+    width: 30px;
+    min-height: 30px;
+    border: black;
+    border-radius: 5px;
+}
+
+.BinButton{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 5%;
+    padding-right: 5%;
+}
+
+.Bin{
+    background-image: url("../Images/BinOutline.svg");
+    width: 30px;
+    min-height: 30px;
+    background-color: transparent;
+    border: none;   
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgba(0, 165, 206, 0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 165, 206, 1);
+    border-radius: 4px;
+}
