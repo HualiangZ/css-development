@@ -12,6 +12,7 @@ h1, p, label, h2{
     color: #fff;
 }
 
+
 .Banner{
     z-index: 1;
     width: 100%;
@@ -157,6 +158,10 @@ h1, p, label, h2{
 
 .FormGroup{
     padding-left: 2%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 .FormQ1{
@@ -165,8 +170,6 @@ h1, p, label, h2{
     min-width: 100%;
     justify-content: space-between;
 }
-
-
 
 
 .FormQ2{
@@ -178,9 +181,47 @@ h1, p, label, h2{
 
 .ToggleGroup{
     align-items: flex-end;
-    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid gray;
+    background-color: #00051F;
+    height: 10%;
+    min-width: 15%;
+    margin-right: 10%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
+.CustomInput {
+    flex-grow: 1;
+}
+
+.CustomInput input[type=radio] {
+    display: none;
+}
+
+.CustomInput input[type=radio]:checked + label {
+    background-color: transparent;
+    color: #fff;
+    max-width: 64%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 1px solid #00ABD5;
+    background-image: radial-gradient(circle, transparent 50%, #00ABD5);
+  }
+
+.CustomInput label {
+    display: block;
+    padding: 6px 8px;
+    color: #fff;
+    text-align: center;
+  }
+  
 
 .FormDate{
     padding-top: 2%;
@@ -228,7 +269,7 @@ option{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     background-color: transparent;
-    background-image: radial-gradient(circle, transparent, transparent 80%, white);
+    background-image: radial-gradient(circle, transparent 80%, white);
     border-color: #fff;
     color: #fff;
     width: 20%;

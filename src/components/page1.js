@@ -6,52 +6,62 @@ function Acordion() {
     const [Hidden, setHidden] = useState(false)
     return (
         <div className="FormSelect">
-            <br/>
-                <div className="border" style={{width: Hidden ? "100%": 0}} />
-            <br/>
+            <br />
+            <div className="border" style={{ width: Hidden ? "100%" : 0 }} />
+            <br />
 
             <form className="FormGroup">
                 <div className="Accordion">
                     <h2 className="form-title">Create New</h2>
                     <div className='ColapesBtn'>
-                        <button  type="button" 
-                        className='AccordionBtn' 
-                        style={{transform: Hidden ? "rotate(180deg)": ""}}
-                        onClick={()=>setHidden(!Hidden)}>
+                        <button type="button"
+                            className='AccordionBtn'
+                            style={{ transform: Hidden ? "rotate(180deg)" : "" }}
+                            onClick={() => setHidden(!Hidden)}>
 
                         </button>
                     </div>
                 </div>
 
-                <div className='Hidden' style={{height : Hidden ?"100%" :0 , overflow: Hidden?'show':"hidden"}}>
+                <div className='Hidden' style={{ height: Hidden ? "100%" : 0, overflow: Hidden ? 'show' : "hidden" }}>
                     <div className="FormQ1">
                         <div>
                             <label for="question1">Question 1?</label>
                             <p className="description">question 1 example</p>
                         </div>
                         <div className="ToggleGroup">
-                            <input type="radio" className="YesButton" name="action" value="yes" />
-                            <label for="YesTxt">Yes</label>
-                            <input type="radio" className="NoButton" name="action" value="no" />
-                            <label for="NoTxt">No</label>
+                            <div className='CustomInput'>
+                                <input type="radio" className="YesButton" id="YesTxt" name="action" value="yes" checked />
+                                <label for="YesTxt">Yes</label>
+                            </div>
+
+                            <div className='CustomInput'>
+                                <input type="radio" className="NoButton" id="NoTxt" name="action" value="no" />
+                                <label for="NoTxt">No</label>
+                            </div>
                         </div>
 
                     </div>
-                    <br/>
-                        <div className="border" style={{width: '95%', borderColor: 'grey' }}/>
-                    <br/>
+                    <br />
+                    <div className="border" style={{ width: '95%', borderColor: 'grey' }} />
+                    <br />
                     <div className="FormQ2">
                         <div>
                             <label for="question2">Question 2?</label>
                             <p className="description">Question 2 example.</p>
                         </div>
 
-                        <form className="ToggleGroup">
-                            <input type="radio" className="YesButton" name="action" value="yes" />
-                            <label for="YesTxt">Yes</label>
-                            <input type="radio" className="NoButton" name="action" value="no" />
-                            <label for="NoTxt">No</label>
-                        </form>
+                        <div className="ToggleGroup">
+                            <div className='CustomInput'>
+                                <input type="radio" className="YesButton" id="YesTxt2" name="action1" value="yes" checked />
+                                <label for="YesTxt2">Yes</label>
+                            </div>
+
+                            <div className='CustomInput'>
+                            <input type="radio" className="NoButton" id="NoTxt2" name="action1" value="no" />
+                            <label for="NoTxt2">No</label>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -120,16 +130,16 @@ export default function Page1() {
                 <h1 className="Title-page1">TITLE TITLE PAGE</h1>
                 <p className='SubTitle'>this is the title</p>
             </div>
-            
-            
+
+
             {Acordion()}
 
 
-            <br/>
-                <div className="border" />
+            <br />
+            <div className="border" />
 
             <div className="CreateForm">
-                
+
                 <button className='Create'> + </button>
                 <div className='CreateText'>
                     <label for="CreateNewForm">Create New</label>
