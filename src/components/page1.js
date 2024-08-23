@@ -111,7 +111,7 @@ function Acordion(value) {
                     </div>
 
                     <div className='CompleteButton'>
-                        <button className='complete'></button>
+                        <button type="button" className='complete' onClick={() => setHidden(!Hidden)}></button>
                         <label for='complete'>Comfirm Changes</label>
                     </div>
                 </div>
