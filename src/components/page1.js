@@ -1,8 +1,8 @@
 
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Page1.css'
 
-function Acordion() {
+function Acordion(value) {
     const [Hidden, setHidden] = useState(false)
     return (
         <div className="FormSelect">
@@ -31,13 +31,13 @@ function Acordion() {
                         </div>
                         <div className="ToggleGroup">
                             <div className='CustomInput'>
-                                <input type="radio" className="YesButton" id="YesTxt" name="action" value="yes" checked />
-                                <label for="YesTxt">Yes</label>
+                                <input type="radio" className="YesButton" id={`YesTxt${value.toString()}`} name={value.toString()} value="yes"/>
+                                <label for={`YesTxt${value.toString()}`}>Yes</label>
                             </div>
 
                             <div className='CustomInput'>
-                                <input type="radio" className="NoButton" id="NoTxt" name="action" value="no" />
-                                <label for="NoTxt">No</label>
+                                <input type="radio" className="NoButton" id={`NoTxt${value.toString()}`} name={value.toString()} value="no" />
+                                <label for={`NoTxt${value.toString()}`}>No</label>
                             </div>
                         </div>
 
@@ -53,13 +53,13 @@ function Acordion() {
 
                         <div className="ToggleGroup">
                             <div className='CustomInput'>
-                                <input type="radio" className="YesButton" id="YesTxt2" name="action1" value="yes" checked />
-                                <label for="YesTxt2">Yes</label>
+                                <input type="radio" className="YesButton" id= {`YesTxt2${(value+1).toString()}`} name={(value+2).toString()} value="yes"/>
+                                <label for={`YesTxt2${(value+1).toString()}`}>Yes</label>
                             </div>
 
                             <div className='CustomInput'>
-                                <input type="radio" className="NoButton" id="NoTxt2" name="action1" value="no" />
-                                <label for="NoTxt2">No</label>
+                                <input type="radio" className="NoButton" id= {`NoTxt2${(value+1).toString()}`} name={(value+2).toString()} value="no" />
+                                <label for={`NoTxt2${(value+1).toString()}`}>No</label>
                             </div>
                         </div>
 
@@ -122,7 +122,24 @@ function Acordion() {
     );
 }
 
+
 export default function Page1() {
+    const [count, SetCount] = useState(4)
+
+    function AddCounter(){ 
+        SetCount(count+1)
+         console.log(count)
+    }
+
+    function DisplayAccordions(){
+        let Accordions = [];
+        for (let i = 0; i < count; i++) {
+            Accordions.push(Acordion(i));
+        }
+        return Accordions;
+    }
+
+
     return (
         <div className="PageContainer-page1">
 
@@ -131,16 +148,14 @@ export default function Page1() {
                 <p className='SubTitle'>this is the title</p>
             </div>
 
-
-            {Acordion()}
-
+            {DisplayAccordions()}
 
             <br />
             <div className="border" />
 
             <div className="CreateForm">
 
-                <button className='Create'> + </button>
+                <button className='Create' onClick={()=>AddCounter()}> + </button>
                 <div className='CreateText'>
                     <label for="CreateNewForm">Create New</label>
                     <input type="text" className="NewFormTilte" placeholder='e.g placeholder'></input>
