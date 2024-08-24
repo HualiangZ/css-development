@@ -5,7 +5,7 @@
     display: flex;
     flex: 1;
     align-items: center;
-    justify-content: space-between;
+    
 }
 
 @media (orientation: portrait) {
@@ -14,13 +14,42 @@
         flex-direction: column;
         display: flex;
         height: 100%;
+        margin-top: 1%;
     }
 
+    .PageContainer-Page2 .Container{
+        width: 100%;
+        height: 77vh;
+        overflow-x: hidden;
+    }
+
+    .PageContainer-Page2 .CustomInput{
+        min-width: 30%;
+    }
+    
+    .PageContainer-Page2 .ToggleGroup{
+        min-width: 90%;
+    }
+
+    .ToggleGroup2{
+        min-width: 90%;
+    }
+
+    .CustomInput2 {
+        flex-grow: 1;
+        background-color: gray;
+        margin-right: 2%;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        min-width: 30%;
+    }    
+
     .Folders{
-        display:grid;
-        grid-template-columns: auto auto;
-        min-height: 100%;
-        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
     }
     
     .BottomBanner{
@@ -40,6 +69,58 @@
         border-radius: 100%;
         border: 1px solid #fff;
     }
+
+    .Folder{
+        margin-left: 2%;
+        height: 100%;
+        width: 100%;
+        background-image: url("../Images/Album.svg");
+        background-color: gray;
+        border:none;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: fill;
+        border-radius: 10%;
+    }
+
+    .FolderLable{
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .FolderHolder{
+        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        min-width: 40%;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    .FolderHolder2{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-left: 5%;
+    }
+
+    .AllFolders{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 80%;
+    }
+
+    .Folder1{
+        margin-right: 1%;
+        margin-bottom: 1%;
+        height:49%;
+        width: 49%;
+        background-color: gray;
+        border-radius: 10%;
+    }
 }
 
 @media (orientation: landscape)  {
@@ -48,23 +129,99 @@
         flex-direction: column;
         display: flex;
         height: 100%;
+        margin-top: 5px;
     }
 
+    .PageContainer-Page2 .Container{
+        width: 100%;
+        height: 88vh;
+        overflow-x: hidden;
+    }
+
+    .PageContainer-Page2 .CustomInput{
+        min-width: 20%;
+    }
+
+    .PageContainer-Page2 .ToggleGroup{
+        min-width: 95%;
+    }
+
+    .ToggleGroup2{
+        min-width: 95%;
+    }
+
+    .CustomInput2 {
+        flex-grow: 1;
+        background-color: gray;
+        margin-right: 2%;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        min-width: 20%;
+    }
+    
+
     .Folders{
-        display:grid;
-        grid-template-columns: auto auto auto auto;
-        min-height: 100%;
-        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        margin-right: 1%;
     }
 
     .BottomBanner{
         display: none;
     }
+    .Folder{
+        margin-left: 2%;
+        height: 60%;
+        min-width: 90%;
+        background-image: url("../Images/Album.svg");
+        background-color: gray;
+        border:none;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: fill;
+        border-radius: 10%;
+    }
 
-}
-    
+    .FolderLable{
+        margin-left: 5%;
+        margin-top: 5%;
+    }
 
+    .FolderHolder{
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        min-width: 25%;
+    }
 
+    .FolderHolder2{
+        display: flex;
+        flex-direction: column;
+        min-width: 25%;
+    }
+
+    .AllFolders{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 60%;
+    }
+
+    .Folder1{
+        margin-right: 1%;
+        margin-bottom: 1%;
+        height:50%;
+        width: 49%;
+        background-color: gray;
+        border-radius: 10%;
+    }
+
+} 
 
 .Banner1{
     background: #00051F;
@@ -79,28 +236,17 @@
     background: radial-gradient(circle, rgba(0,165,206,1) 50%, rgba(0,165,206,0.5) 100%);
 }
 
-.PageContainer-Page2 .Container{
-    width: 100%;
-    height: 100vh;
-    overflow-y: hidden;
-}
-
 .ButtonGroup{
+    margin-right: 1%;
     display: flex;
+    flex-direction: row;
 }
 
 .ArrowBtn{
     background-color: transparent;
-    position: absolute;
     display: flex;
-    justify-content: flex-end;
-    right: 0;
-    height: 4%;
-    width: 7%;
+    min-height: 100%;
     border-radius: 100%;
-    padding-right: 1%;
-    padding-bottom: 1%;
-    
 }
 
 .Arrow{
@@ -108,41 +254,25 @@
     width: 35px;
     min-height: 50%;
     background-image: url("../Images/ArrowRight.svg");
-    background-position: center;
-    background-size: cover;
+    background-position:center;
+    background-size: fill;
     background-repeat: no-repeat;
     background-color: #00ABD5;
     border:none;
-    
 }
 
 .ToggleGroup2{
-    align-items: flex-end;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #00051F;
     height: 10%;
-    min-width: 96%;
-    margin-right: 11%;
-    overflow-x:scroll;
+    overflow-x: scroll;
     margin-left: 2%;
 }
 
 .ToggleGroup2::-webkit-scrollbar {
     height: 0px;
-}
-
-
-.CustomInput2 {
-    flex-grow: 1;
-    background-color: gray;
-    margin-right: 2%;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    min-width: 30%;
 }
 
 .CustomInput2 input[type=radio] {
@@ -160,7 +290,6 @@
     background-image: radial-gradient(circle, transparent 50%, #00ABD5);
 }
 
-
 .CustomInput2 label {
     display: block;
     padding: 6px 8px;
@@ -168,12 +297,8 @@
     text-align: center;
 }
 
-.PageContainer-Page2 .CustomInput{
-    min-width: 30%;
-}
-
 .PageContainer-Page2 .ToggleGroup{
-    min-width: 96%;
+    margin-right:0%;
     overflow-x: scroll;
     margin-left: 2%;
 }
@@ -197,31 +322,3 @@
     background-color: transparent;
     border: none;
 }
-
-
-
-.Folder{
-    margin-left: 2%;
-    height: 70%;
-    background-image: url("../Images/Album.svg");
-    background-color: gray;
-    border:none;
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 10%;
-}
-.FolderLable{
-    margin-left: 5%;
-    margin-top: 5%;
-}
-.FolderHolder{
-    margin-left: 5%;
-    display: flex;
-    flex-direction: column;
-    min-height: 70%;
-    min-width: 40%;
-    justify-content: center;
-}
-
-

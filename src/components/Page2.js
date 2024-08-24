@@ -97,48 +97,78 @@ function Folder() {
     );
 }
 
+function MuiltiFolder() {
+    return (
+        <div className='FolderHolder2'>
+            <div className='AllFolders'>
+                <div className='Folder1'>
+                    <p>None</p>
+                </div>
+
+                <div className='Folder1'>
+                    <p>None</p>
+                </div>
+
+                <div className='Folder1'>
+                    <p>None</p>
+                </div>
+
+                <div className='Folder1'>
+                    <p>None</p>
+                </div>
+
+                <div className='Expand'>
+
+                </div>
+            </div>
+            <label className='FolderLable'>Folder</label>
+        </div>
+    );
+}
+
 export default function Page2() {
 
     function Folders() {
         let folderArr = [];
         for (let i = 0; i < 10; i++) {
-            folderArr.push(Folder());
+            if (i === 4) {
+                folderArr.push(MuiltiFolder());
+            } else {
+                folderArr.push(Folder());
+            }
         }
         return folderArr;
     }
 
     return (
         <div className='PageContainer-Page2'>
-             <div className='Banner'>
-                    <div className='Banner1'>
-                        <p className='Logo'>LOGO</p>
+            <div className='Banner'>
+                <div className='Banner1'>
+                    <p className='Logo'>LOGO</p>
+                </div>
+                <div className='Banner2'>
+                    <div className='HomeBtn'>
+                        <p>Home</p>
                     </div>
-                    <div className='Banner2'>
-                        <div className='HomeBtn'>
-                            <p>Home</p>
-                        </div>
-                        <div className='Title'>
-                            <p>TITLE</p>
-                        </div>
-                        <div className='InfoContainer'>
-                            <button className='InfoBtn'>
-                                i
-                            </button>
-                        </div>
+                    <div className='Title'>
+                        <p>TITLE</p>
+                    </div>
+                    <div className='InfoContainer'>
+                        <button className='InfoBtn'>
+                            i
+                        </button>
                     </div>
                 </div>
+            </div>
             <div className='MainContiner'>
-               
-                <br />
+
                 <div className='Container'>
                     {FirstToggleBtn()}
                     <p className='SubTitle'>Some Text here</p>
                     {SecondToggleBtn()}
                     <p className='SubTitle'>Some other Text here</p>
                     <div className='Folders'>
-
                         {Folders()}
-
                     </div>
                 </div>
 
