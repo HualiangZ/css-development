@@ -109,8 +109,7 @@ export default function Page2() {
 
     return (
         <div className='PageContainer-Page2'>
-            <div className='MainContiner'>
-                <div className='Banner'>
+             <div className='Banner'>
                     <div className='Banner1'>
                         <p className='Logo'>LOGO</p>
                     </div>
@@ -128,6 +127,8 @@ export default function Page2() {
                         </div>
                     </div>
                 </div>
+            <div className='MainContiner'>
+               
                 <br />
                 <div className='Container'>
                     {FirstToggleBtn()}
