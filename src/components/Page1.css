@@ -8,6 +8,7 @@
     justify-content: space-between;
 }
 
+
 h1, p, label, h2{
     color: #fff;
 }
@@ -207,7 +208,7 @@ h1, p, label, h2{
 .CustomInput input[type=radio]:checked + label {
     background-color: transparent;
     color: #fff;
-    max-width: 64%;
+    
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
@@ -253,7 +254,6 @@ option{
 
 .FormDone{
     width: 100%;
-
     position: sticky;
     bottom: 0;
     min-height :100px;
@@ -292,7 +292,7 @@ option{
     z-index: 0;
     min-width: 100%;
     min-height: 50%;
-    border-radius: 80px;
+    border-radius: 100%;
     background-image: url("../Images/BackArrow.svg");
     background-size: cover;
     background-color: #00ABD5;

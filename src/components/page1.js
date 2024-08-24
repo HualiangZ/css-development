@@ -148,7 +148,7 @@ export default function Page1() {
                 <p className='SubTitle'>this is the title</p>
             </div>
 
-            {DisplayAccordions()}
+                {DisplayAccordions()}
 
             <br />
             <div className="border" />
