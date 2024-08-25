@@ -91,6 +91,12 @@ h1, p, label, h2{
         width: 90%;
     }
 
+    .ColapesBtn{
+        padding-right: 10px;
+        padding-top: 5%;
+        width: 25px;
+    }
+
 }
 
 
@@ -147,15 +153,22 @@ h1, p, label, h2{
         border-bottom: 1px solid white;
         width: 30%;
     }
+
+    .ColapesBtn{
+        margin-right: 10px;
+        margin-top: 3%;
+        width: 30px;
+        min-height: 60px;
+    }
 }
 
-
-
-.form-title{
-    border: 1px solid #00ABD5;
-    border-top:none ;
-    border-left:none ;
-    border-right:none ;
+.FormTitle{
+    border: 2px solid #00ABD5;
+    width:70%;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    align-self: center;
 }
 
 .FormGroup{
@@ -281,12 +294,7 @@ option{
     text-decoration: underline;
 }
 
-.ColapesBtn{
-    padding-right: 10px;
-    padding-top: 5%;
-    width: 25px;
-    min-height: 50px;
-}
+
 
 .AccordionBtn{
     z-index: 0;
@@ -297,7 +305,6 @@ option{
     background-size: cover;
     background-color: #00ABD5;
     border: none;
-    
 }
 
 .Accordion{

@@ -12,7 +12,7 @@ function Acordion(value) {
 
             <form className="FormGroup">
                 <div className="Accordion">
-                    <h2 className="form-title">Create New</h2>
+                    <h2 className="FormTitle">Create New</h2>
                     <div className='ColapesBtn'>
                         <button type="button"
                             className='AccordionBtn'

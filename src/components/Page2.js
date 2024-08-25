@@ -1,10 +1,33 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Page2.css'
 
 function FirstToggleBtn() {
+    const [scrollPosition, SetScrollPosition] = useState(0);
+    const constainerRef = useRef();
+
+    function Scroll(value) {
+        const maxScroll = constainerRef.current.scrollWidth - constainerRef.current.clientWidth;
+        let newScroll = scrollPosition + value;
+
+        if (newScroll < 0) {
+            newScroll = 0;
+        }
+        if (newScroll > maxScroll) {
+            newScroll = maxScroll;
+        }
+        SetScrollPosition(newScroll);
+        constainerRef.current.scrollLeft = newScroll;
+        console.log(newScroll)
+
+    }
+
     return (
         <div className="ButtonGroup">
-            <div className='ToggleGroup'>
+            <div className='ArrowBtnLeft' onClick={() => Scroll(-200)} style={{ transform: "rotate(180deg)" }}>
+                <button className='Arrow'></button>
+            </div>
+
+            <div ref={constainerRef} className='ToggleGroup'>
                 <div className='CustomInput'>
                     <input type="radio" className="Button1" id='Button1' name='action1' value="Button1" />
                     <label for='Button1'>Button 1</label>
@@ -35,7 +58,7 @@ function FirstToggleBtn() {
                     <label for='Button6'>Button 6</label>
                 </div>
             </div>
-            <div className='ArrowBtn'>
+            <div className='ArrowBtnRight' onClick={() => Scroll(200)}>
                 <button className='Arrow'></button>
             </div>
         </div>
@@ -44,13 +67,33 @@ function FirstToggleBtn() {
 }
 
 function SecondToggleBtn() {
-    const ref = useRef(0);
-    const scroll = (scrollOffset) => {
-        ref.current.scrollLeft += scrollOffset;
-    };
+    const [scrollPosition, SetScrollPosition] = useState(0);
+    const constainerRef = useRef();
+
+    function Scroll(value) {
+
+        const maxScroll = constainerRef.current.scrollWidth - constainerRef.current.clientWidth;
+        let newScroll = scrollPosition + value;
+
+        if (newScroll < 0) {
+            newScroll = 0;
+        }
+        if (newScroll > maxScroll) {
+            newScroll = maxScroll;
+        }
+        SetScrollPosition(newScroll);
+        constainerRef.current.scrollLeft = newScroll;
+        console.log(newScroll)
+    }
+
+
     return (
         <div className="ButtonGroup">
-            <div className="ToggleGroup2">
+            
+            <div className='ArrowBtnLeft' onClick={() => Scroll(-200)} style={{ transform: "rotate(180deg)" }}>
+                <button className='Arrow'></button>
+            </div>
+            <div ref={constainerRef} className="ToggleGroup2">
                 <div className='CustomInput2'>
                     <input type="radio" className="Button7" id='Button7' name='action' value="Button1" />
                     <label for='Button7'>Button 1</label>
@@ -81,7 +124,7 @@ function SecondToggleBtn() {
                     <label for='Button12'>Button 6</label>
                 </div>
             </div>
-            <div className='ArrowBtn' onClick={() => scroll(20)}>
+            <div className='ArrowBtnRight' onClick={() => Scroll(200)}>
                 <button className='Arrow'></button>
             </div>
         </div>

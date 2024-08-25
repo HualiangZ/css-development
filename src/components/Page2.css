@@ -28,11 +28,12 @@
     }
     
     .PageContainer-Page2 .ToggleGroup{
-        min-width: 90%;
+        min-width: 80%;
+
     }
 
     .ToggleGroup2{
-        min-width: 90%;
+        min-width: 80%;
     }
 
     .CustomInput2 {
@@ -162,11 +163,11 @@
     }
 
     .PageContainer-Page2 .ToggleGroup{
-        min-width: 95%;
+        width: 100%;
     }
 
     .ToggleGroup2{
-        min-width: 95%;
+        width: 100%;
     }
 
     .CustomInput2 {
@@ -290,9 +291,20 @@
     flex-direction: row;
 }
 
-.ArrowBtn{
+.ArrowBtnLeft{
     background-color: transparent;
     display: flex;
+    transform: rotate(180deg);
+    margin-right: -10%;
+    min-height: 100%;
+    border-radius: 100%;
+    
+}
+
+.ArrowBtnRight{
+    background-color: transparent;
+    display: flex;
+    margin-left: -2%;
     min-height: 100%;
     border-radius: 100%;
 }
@@ -316,7 +328,8 @@
     background-color: #00051F;
     height: 10%;
     overflow-x: scroll;
-    margin-left: 2%;
+    scroll-behavior: smooth;
+    margin-left: 10%;
 }
 
 .ToggleGroup2::-webkit-scrollbar {
@@ -348,7 +361,8 @@
 .PageContainer-Page2 .ToggleGroup{
     margin-right:0%;
     overflow-x: scroll;
-    margin-left: 2%;
+    scroll-behavior: smooth;
+    margin-left: 10%;
 }
 
 .PageContainer-Page2 .ToggleGroup::-webkit-scrollbar {
