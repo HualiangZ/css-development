@@ -12,6 +12,8 @@ function Acordion(value) {
 
             <form className="FormGroup">
                 <div className="Accordion">
+                    <div className='CirclePic'>
+                    </div>
                     <h2 className="FormTitle">Create New</h2>
                     <div className='ColapesBtn'>
                         <button type="button"
@@ -148,12 +150,9 @@ export default function Page1() {
                 <h1 className="Title-page1">TITLE TITLE PAGE</h1>
                 <p className='SubTitle'>this is the title</p>
             </div>
-
-            {DisplayAccordions()}
-
+                {DisplayAccordions()}
             <br />
             <div className="border" />
-
             <div className="CreateForm">
 
                 <button className='Create' onClick={() => AddCounter()}> + </button>

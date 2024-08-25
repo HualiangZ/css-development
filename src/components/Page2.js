@@ -4,10 +4,11 @@ import './Page2.css'
 function FirstToggleBtn() {
     const [scrollPosition, SetScrollPosition] = useState(0);
     const constainerRef = useRef();
+    let newScroll = 0
 
     function Scroll(value) {
         const maxScroll = constainerRef.current.scrollWidth - constainerRef.current.clientWidth;
-        let newScroll = scrollPosition + value;
+        newScroll = scrollPosition + value;
 
         if (newScroll < 0) {
             newScroll = 0;
@@ -15,15 +16,17 @@ function FirstToggleBtn() {
         if (newScroll > maxScroll) {
             newScroll = maxScroll;
         }
+
         SetScrollPosition(newScroll);
         constainerRef.current.scrollLeft = newScroll;
         console.log(newScroll)
 
     }
 
+
     return (
         <div className="ButtonGroup">
-            <div className='ArrowBtnLeft' onClick={() => Scroll(-200)} style={{ transform: "rotate(180deg)" }}>
+            <div className='ArrowBtnLeft' onClick={() => Scroll(-200)}>
                 <button className='Arrow'></button>
             </div>
 
@@ -69,7 +72,6 @@ function FirstToggleBtn() {
 function SecondToggleBtn() {
     const [scrollPosition, SetScrollPosition] = useState(0);
     const constainerRef = useRef();
-
     function Scroll(value) {
 
         const maxScroll = constainerRef.current.scrollWidth - constainerRef.current.clientWidth;
@@ -89,8 +91,8 @@ function SecondToggleBtn() {
 
     return (
         <div className="ButtonGroup">
-            
-            <div className='ArrowBtnLeft' onClick={() => Scroll(-200)} style={{ transform: "rotate(180deg)" }}>
+
+            <div className='ArrowBtnLeft' onClick={() => Scroll(-200)}>
                 <button className='Arrow'></button>
             </div>
             <div ref={constainerRef} className="ToggleGroup2">
