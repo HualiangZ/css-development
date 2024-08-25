@@ -7,6 +7,7 @@
       }
 
       .cls-2, .cls-3 {
+        fill:#808080;
         stroke: #fff;
       }
 

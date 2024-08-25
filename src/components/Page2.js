@@ -147,10 +147,10 @@ export default function Page2() {
                 </div>
                 <div className='Banner2'>
                     <div className='HomeBtn'>
-                        <p>Home</p>
+                        <div className='HomeTxt'>Home</div>
                     </div>
                     <div className='Title'>
-                        <p>TITLE</p>
+                        <div className='TitleTxt'>TITLE</div>
                     </div>
                     <div className='InfoContainer'>
                         <button className='InfoBtn'>
