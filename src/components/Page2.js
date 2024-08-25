@@ -102,23 +102,22 @@ function MuiltiFolder() {
         <div className='FolderHolder2'>
             <div className='AllFolders'>
                 <div className='Folder1'>
-                    <p>None</p>
+                    <p className='FolderTxt'>None</p>
                 </div>
 
                 <div className='Folder1'>
-                    <p>None</p>
+                    <p className='FolderTxt'>None</p>
                 </div>
 
                 <div className='Folder1'>
-                    <p>None</p>
+                    <p className='FolderTxt'>None</p>
                 </div>
 
                 <div className='Folder1'>
-                    <p>None</p>
+                    <p className='FolderTxt'>None</p>
                 </div>
 
                 <div className='Expand'>
-
                 </div>
             </div>
             <label className='FolderLable'>Folder</label>
