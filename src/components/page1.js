@@ -31,7 +31,7 @@ function Acordion(value) {
                         </div>
                         <div className="ToggleGroup">
                             <div className='CustomInput'>
-                                <input type="radio" className="YesButton" id={`YesTxt${value.toString()}`} name={value.toString()} value="yes"/>
+                                <input type="radio" className="YesButton" id={`YesTxt${value.toString()}`} name={value.toString()} value="yes" />
                                 <label for={`YesTxt${value.toString()}`}>Yes</label>
                             </div>
 
@@ -53,13 +53,13 @@ function Acordion(value) {
 
                         <div className="ToggleGroup">
                             <div className='CustomInput'>
-                                <input type="radio" className="YesButton" id= {`YesTxt2${(value+1).toString()}`} name={(value+2).toString()} value="yes"/>
-                                <label for={`YesTxt2${(value+1).toString()}`}>Yes</label>
+                                <input type="radio" className="YesButton" id={`YesTxt2${(value + 1).toString()}`} name={(value + 2).toString()} value="yes" />
+                                <label for={`YesTxt2${(value + 1).toString()}`}>Yes</label>
                             </div>
 
                             <div className='CustomInput'>
-                                <input type="radio" className="NoButton" id= {`NoTxt2${(value+1).toString()}`} name={(value+2).toString()} value="no" />
-                                <label for={`NoTxt2${(value+1).toString()}`}>No</label>
+                                <input type="radio" className="NoButton" id={`NoTxt2${(value + 1).toString()}`} name={(value + 2).toString()} value="no" />
+                                <label for={`NoTxt2${(value + 1).toString()}`}>No</label>
                             </div>
                         </div>
 
@@ -109,14 +109,15 @@ function Acordion(value) {
                     <div className='BinButton'>
                         <button className='Bin'></button>
                     </div>
-
-                    <div className='CompleteButton'>
-                        <button type="button" className='complete' onClick={() => setHidden(!Hidden)}></button>
-                        <label for='complete'>Comfirm Changes</label>
-                    </div>
                 </div>
 
             </form>
+
+            <div className='CompleteButton' style={{ height: Hidden ? "100%" : 0, overflow: Hidden ? 'show' : "hidden" }}>
+                <button type="button" className='complete' onClick={() => setHidden(!Hidden)}></button>
+                <label for='complete'>Comfirm Changes</label>
+            </div>
+
         </div>
 
     );
@@ -126,12 +127,12 @@ function Acordion(value) {
 export default function Page1() {
     const [count, SetCount] = useState(4)
 
-    function AddCounter(){ 
-        SetCount(count+1)
-         console.log(count)
+    function AddCounter() {
+        SetCount(count + 1)
+        console.log(count)
     }
 
-    function DisplayAccordions(){
+    function DisplayAccordions() {
         let Accordions = [];
         for (let i = 0; i < count; i++) {
             Accordions.push(Acordion(i));
@@ -148,14 +149,14 @@ export default function Page1() {
                 <p className='SubTitle'>this is the title</p>
             </div>
 
-                {DisplayAccordions()}
+            {DisplayAccordions()}
 
             <br />
             <div className="border" />
 
             <div className="CreateForm">
 
-                <button className='Create' onClick={()=>AddCounter()}> + </button>
+                <button className='Create' onClick={() => AddCounter()}> + </button>
                 <div className='CreateText'>
                     <label for="CreateNewForm">Create New</label>
                     <input type="text" className="NewFormTilte" placeholder='e.g placeholder'></input>
