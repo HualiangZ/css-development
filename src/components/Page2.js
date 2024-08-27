@@ -161,11 +161,12 @@ function MuiltiFolder() {
                 <div className='Folder1'>
                     <p className='FolderTxt'>None</p>
                 </div>
-
                 <div className='Expand'>
                 </div>
             </div>
+
             <label className='FolderLable'>Folder</label>
+
         </div>
     );
 }
@@ -212,7 +213,7 @@ export default function Page2() {
                     </div>
                 </div>
             </div>
-            <div className='MainContiner'>
+            <div className='MainContainer'>
 
                 <div className='Container'>
                     {FirstToggleBtn()}
@@ -223,7 +224,6 @@ export default function Page2() {
                         {Folders()}
                     </div>
                 </div>
-
 
             </div>
             <div className='BottomBanner'>
