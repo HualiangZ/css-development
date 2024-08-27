@@ -16,6 +16,13 @@
         height: 100%;
         margin-top: 1%;
     }
+    .Logo{
+        display: none;
+    }
+
+    .Banner1{
+        margin-top: 5%;
+    }
 
     .PageContainer-Page2 .Container{
         width: 100%;
@@ -65,9 +72,9 @@
     }
 
     .Circle{
-        width: 6%;
-        height: 65%;
         border-radius: 100%;
+        padding-top:4%;
+        min-width: 7%;
         border: 1px solid #fff;
     }
 
@@ -151,6 +158,27 @@
         height: 100%;
         margin-top: 5px;
     }
+
+    .Logo{
+        margin-left: 2%;
+        font-size: 20px;
+    }
+
+    .CircleTop{
+        border-radius: 100%;
+        padding-top: 1%;
+        padding-left: 2%;
+        margin-right: 2%;
+        border: 1px solid #fff;
+    }
+
+    .TopCircleContainer{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
 
     .PageContainer-Page2 .Container{
         width: 100%;
@@ -256,10 +284,13 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: fill;
-
     }
 
 } 
+
+.HomeTxt{
+    margin-left: 45%;
+}
 
 .TitleTxt, .HomeTxt{
     color: #fff;

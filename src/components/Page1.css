@@ -37,7 +37,6 @@ h1, p, label, h2{
 
 
 @media (orientation: portrait) {
-
     h1{
         font-family: Caviar dreams;
         font-weight:bold;
@@ -302,15 +301,14 @@ option{
     text-decoration: underline;
 }
 
-
-
 .AccordionBtn{
     z-index: 0;
-    min-width: 100%;
-    min-height: 50%;
     border-radius: 100%;
+    padding-top:100%;
+    min-width: 100%;
     background-image: url("../Images/BackArrow.svg");
-    background-size: cover;
+    background-size: fill;
+    background-position: center;
     background-color: #00ABD5;
     border: none;
 }

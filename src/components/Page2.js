@@ -189,6 +189,14 @@ export default function Page2() {
             <div className='Banner'>
                 <div className='Banner1'>
                     <p className='Logo'>LOGO</p>
+                    <div className='TopCircleContainer'>
+                        <div className='CircleTop'>
+                            <p></p>
+                        </div>
+                        <div className='CircleTop'>
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
                 <div className='Banner2'>
                     <div className='HomeBtn'>
