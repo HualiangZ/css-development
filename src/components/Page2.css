@@ -159,6 +159,10 @@
         margin-top: 5px;
     }
 
+    .SubTitle2{
+        color:gray;
+    }
+
     .Logo{
         margin-left: 2%;
         font-size: 20px;
@@ -295,6 +299,11 @@
 .TitleTxt, .HomeTxt{
     color: #fff;
     
+}
+
+.SubTitle, .SubTitle2{
+    display: flex;
+    justify-content: center;
 }
 
 .TitleTxt{
