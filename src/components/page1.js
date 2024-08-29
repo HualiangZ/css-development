@@ -148,7 +148,7 @@ export default function Page1() {
 
             <div className="Banner">
                 <h1 className="Title-page1">TITLE TITLE PAGE</h1>
-                <p className='SubTitle'>this is the title</p>
+                <div className='SubTitle' style={{color: 'white'}}>this is the title</div>
             </div>
                 {DisplayAccordions()}
             <br />
